@@ -8,7 +8,7 @@ const NewsImage = ({ item }: NewCardProps) => {
   return (
     <div className="h-full">
       <div className="border-4 p-4 rounded-md shadow-emerald-500 h-full flex flex-col">
-        <Link href={`news/${item?._id}`}>
+        <Link href={`/`}>
           <Image
             src={item?.imageUrl}
             width={500}
@@ -23,11 +23,11 @@ const NewsImage = ({ item }: NewCardProps) => {
           {item.title}
         </h2>
 
-        <p className="text-gray-600 line-clamp-3 flex-grow">
+        <p className="text-gray-600 line-clamp-3 grow">
           {item.description}
         </p>
 
-        <Link href={`news/${item?._id}`}>
+        <Link href={`/`}>
           <Button variant="default" className="mt-4">Read More</Button>
         </Link>
       </div>
